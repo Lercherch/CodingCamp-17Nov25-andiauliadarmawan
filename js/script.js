@@ -18,3 +18,8 @@ function welcomeMessage() {
 function validateForm() {
 
 }
+
+function upop() {
+    let tulisan = document.getElementById("message").value;
+    alert("Kamu menulis: " + tulisan);
+}
