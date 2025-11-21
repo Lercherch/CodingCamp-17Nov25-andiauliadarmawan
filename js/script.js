@@ -11,7 +11,7 @@ function welcomeMessage() {
     }
 
     /// Update the welcome message on the webpage
-    document.getElementById("welcome-speech").innerText = "Welcome, " + userName + "!";
+    document.getElementById("welcome-speech").innerText = "Howdy, " + userName + "!";
 }
 
 /// Function to validate the message form (to be implemented)
@@ -21,5 +21,16 @@ function validateForm() {
 
 function upop() {
     let tulisan = document.getElementById("message").value;
-    alert("Kamu menulis: " + tulisan);
+    alert("Your Message:\n\n" + tulisan);
+}
+
+function welcomeMessage() {
+    document.getElementById("nameModal").classList.remove("hidden");
+}
+
+function saveName() {
+    let userName = document.getElementById("nameInput").value.trim();
+    if (!userName) userName = "Guest";
+    document.getElementById("welcome-speech").innerText = "Howdy, " + userName + "!";
+    document.getElementById("nameModal").classList.add("hidden");
 }

@@ -21,10 +21,10 @@
 
         <!-- Navigation Menu -->
         <nav class="flex">
-            <a class="border p-[4px] rounded" href="#home-page">Home</a>
-            <a class="border p-[4px] rounded" href="#our-profile-page">Our Profile</a>
-            <a class="border p-[4px] rounded" href="#portfolio-page">Portfolio</a>
-            <a class="border p-[4px] rounded" href="#message-us-page">Message Us</a>
+            <a class="border p-[4px]  text-white rounded"  href="#home-page">Home</a>
+            <a class="border p-[4px] text-white rounded" href="#our-profile-page">Our Profile</a>
+            <a class="border p-[4px] text-white rounded" href="#portfolio-page">Portfolio</a>
+            <a class="border p-[4px] text-white rounded" href="#message-us-page">Message Us</a>
         </nav>
     </header>
 
@@ -35,7 +35,9 @@
         <!-- Home Page -->
         <section id="home-page" class="min-h-[500px] text-center content-center">
             <h2 class="text-xl font-bold" id="welcome-speech">Welcome to Our Website</h2>
-            <p class="mt-2">We are glad to have you here. Explore our services and offerings.</p>
+            <p class="mt-2">We are glad to have you here! Explore our services and offerings.</p>
+            <br/>
+            <p>This is our real website! don't be shy to xplore!</p>
         </section>
 
         <hr />
@@ -44,14 +46,34 @@
         <section id="our-profile-page" class="min-h-[500px] text-center content-center">
             <h2 class="text-xl font-bold">About Andi's CaffeIN</h2>
             <p class="mt-2">Andi's CaffeIN is dedicated to providing top-notch services in various domains.</p>
+            <br/>
+            <p>We're a professional peoples who make coffee drinks 4 you</p>
+            <p>We've a lot of drinks menu to boost your</p>
+            <i>Sshh...these all specially 4 you...</i>
+            <br/>
+            <br/>
+            <p>Wanna know more about us?</p>
+            <p><a href="https://www.instagram.com/j.aendx?igsh=MWs0Y2NvOXdtdTNmNQ==" 
+                target="_blank">Click here!</a></p>
         </section>
 
         <hr />
 
         <!-- Portfolio Page -->
         <section id="portfolio-page" class="min-h-[500px] text-center content-center">
-            <h2 class="text-xl font-bold">Our Portfolio</h2>
+            <h1 class="text-xl font-bold">Our Portfolio</h1>
             <p class="mt-2">Take a look at our diverse range of projects that showcase our skills and expertise.</p>
+            <br/>
+            
+            <h3 class="text-xl font-bold">What we've done?</h3>
+    <ul type="I">
+        <li>Gave a <sub>little</sub> <sup>gift</sup> for our lovely customer</li>
+        <li>Trusted with every peoples around da world</li>
+        <li>Made a tycoon game based on our work in real-time</li>
+    </ul>
+    <br/>
+    <p><b>We always makes our customer satisfied!</b></p>
+        
         </section>
 
         <hr />
@@ -60,8 +82,8 @@
         <section id="message-us-page" class="min-h-[500px] p-8">
             <header>
                 <h2 class="text-xl font-bold">Message Us</h2>
-                <p class="mt-2">Have any questions or want to work with us? Hurry! Send us a message and we'll get back to you
-                    promptly.</p>
+                <p class="mt-2">Wanna give feedback or wanna work with us? Hurry! Send us a message and we'll reply you <i>as soon as possible</i>.</p>
+                    <br/>
             </header>
 
             <form>
@@ -78,7 +100,7 @@
                     <textarea class="w-full p-2 border rounded" id="message" name="message" rows="5" placeholder="Write here!"
                         required></textarea>
                 </div>
-                <button onclick="upop()" class="px-4 py-2 bg-blue-500 text-white rounded" >Send Message</button>
+                <button onclick="upop()" class="btn-red" >Send The Message!</button>
             </form>
         </section>
     </main>
@@ -86,10 +108,24 @@
     <hr />
 
     <!-- Footer Content -->
-    <footer>
+    <footer class="text-center">
+        <i>Our Coffee always Numero Uno !</i>
+    </footer>
+    <br/>
+    <footer class="text-center">
         <span> @2025 Andi's CaffeIN</span>
     </footer>
 
+    <!-- popuop -->
+    <div id="nameModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center">
+    <div class="bg-white p-6 rounded shadow max-w-sm w-full text-center">
+        <h2 class="text-xl font-bold mb-4">What's your name?</h2>
+        <input id="nameInput" class="border p-2 w-full rounded" type="text" placeholder="Enter your name here..." />
+        <button onclick="saveName()" class="mt-4 px-4 py-2 bg-red-500 text-white rounded">
+            Continue
+        </button>
+    </div>
+</div>
     <!-- Javascript External -->
     <script src="js/script.js"></script>
 </body>
