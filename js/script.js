@@ -52,9 +52,7 @@ function updateTime() {
     document.getElementById("previewTime").innerText = timeString;
 }
 
-// update setiap 1 detik
 setInterval(updateTime, 1000);
 
-// panggil sekali di awal
 updateTime();
 
