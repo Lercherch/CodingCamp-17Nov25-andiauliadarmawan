@@ -19,18 +19,42 @@ function validateForm() {
 
 }
 
-function upop() {
-    let tulisan = document.getElementById("message").value;
-    alert("Your Message:\n\n" + tulisan);
+function showPreview() {
+    let nama = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let pesan = document.getElementById("message").value;
+    let tgl = document.getElementById("birthdate").value;
+
+
+    let genderEl = document.querySelector('input[name="gender"]:checked');
+    let gender = genderEl ? genderEl.value : "";
+
+    document.getElementById("previewNama").innerText = nama;
+    document.getElementById("previewEmail").innerText = email;
+    document.getElementById("previewGender").innerText = gender;
+    document.getElementById("previewTgl").innerText = tgl;
+    document.getElementById("previewPesan").innerText = pesan;
 }
 
-function welcomeMessage() {
-    document.getElementById("nameModal").classList.remove("hidden");
+// time
+function updateTime() {
+    let now = new Date();
+    let timeString = now.toLocaleString("en-US", {
+        hour12: false,
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+    });
+
+    document.getElementById("previewTime").innerText = timeString;
 }
 
-function saveName() {
-    let userName = document.getElementById("nameInput").value.trim();
-    if (!userName) userName = "Guest";
-    document.getElementById("welcome-speech").innerText = "Howdy, " + userName + "!";
-    document.getElementById("nameModal").classList.add("hidden");
-}
+// update setiap 1 detik
+setInterval(updateTime, 1000);
+
+// panggil sekali di awal
+updateTime();
+

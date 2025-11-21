@@ -80,29 +80,82 @@
 
         <!-- Message Us Page -->
         <section id="message-us-page" class="min-h-[500px] p-8">
-            <header>
-                <h2 class="text-xl font-bold">Message Us</h2>
-                <p class="mt-2">Wanna give feedback or wanna work with us? Hurry! Send us a message and we'll reply you <i>as soon as possible</i>.</p>
-                    <br/>
-            </header>
+    <header>
+        <h2 class="text-xl font-bold">Message Us</h2>
+        <p class="mt-2">
+            Wanna give feedback or wanna work with us? Hurry! Send us a message and we'll reply you 
+            <i>as soon as possible</i>.
+        </p>
+        <br/>
+    </header>
 
-            <form>
-                <div class="mb-4">
-                    <label class="block mb-2" for="name">Name:</label>
-                    <input class="w-full p-2 border rounded" type="text" id="name" name="name" required placeholder="What's your Name, Buddy?"/>
-                </div>
-                <div class="mb-4">
-                    <label class="block mb-2" for="email">Email:</label>
-                    <input class="w-full p-2 border rounded" type="email" id="email" name="email" required placeholder="Don't worry, your Email r safe with us!" />
-                </div>
-                <div class="mb-4">
-                    <label class="block mb-2" for="message">Your Message:</label>
-                    <textarea class="w-full p-2 border rounded" id="message" name="message" rows="5" placeholder="Write here!"
-                        required></textarea>
-                </div>
-                <button onclick="upop()" class="btn-red" >Send The Message!</button>
-            </form>
-        </section>
+    <div class="flex flex-col md:flex-row gap-10 items-start">
+
+
+        <form>
+            <div class="mb-4">
+                <label class="block mb-2" for="name">Name:</label>
+                <input class="w-full p-2 border rounded" type="text" id="name" name="name"
+                    required placeholder="What's your Name, Buddy?" />
+            </div>
+
+            <div class="mb-4">
+                <label class="block mb-2" for="email">Email:</label>
+                <input class="w-full p-2 border rounded" type="email" id="email" name="email"
+                    required placeholder="Don't worry, your Email r safe with us!" />
+            </div>
+
+            <div class="mb-4">
+                <label class="block mb-2" for="birthdate">Tanggal Lahir: </label>
+                <input class="w-full p-2 border rounded" type="date" id="birthdate" name="birthdate"
+                    required />
+            </div>
+
+            <div class="mb-4">
+                <label class="block mb-2">Gender :</label>
+                <label><input type="radio" name="gender" value="Laki-Laki"> Laki-Laki</label>
+                <label class="ml-4"><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+            </div>
+
+            <div class="mb-4">
+                <label class="block mb-2" for="message">Message:</label>
+                <textarea class="w-full p-2 border rounded" id="message" name="message" rows="5"
+                    placeholder="Write here!" required></textarea>
+            </div>
+
+            <button type="button" onclick="showPreview()" class="btn-red">Send The Message!</button>
+        </form>
+
+        <!-- Preview Box -->
+        <div id="previewBox" class="w-80 p-4 border rounded bg-white shadow md:ml-10">
+            <h2 class="text-lg font-bold mb-2">Preview Output</h2>
+
+            <p><strong>Current Time:</strong> <span id="previewTime"></span></p>
+<br>
+            <p><strong>Name:</strong> <span id="previewNama"></span></p>
+            <p><strong>Email:</strong> <span id="previewEmail"></span></p>
+            <p><strong>Birth Date:</strong> <span id="previewTgl"></span></p>
+            <p><strong>Gender:</strong> <span id="previewGender"></span></p>
+
+            <p class="mt-2"><strong>Your Message:</strong></p>
+            <p id="previewPesan" class="whitespace-pre-line"></p>
+        </div>
+
+        <!-- Message Box -->
+        <div id="messageBox" class="hidden p-4 border rounded bg-gray-100 text-black mt-6 w-96">
+            <h3 class="font-bold mb-2">Hasil Input</h3>
+
+            <p id="outputTime"></p>
+            <p id="outputNama"></p>
+            <p id="outputEmail"></p>
+            <p id="outputGender"></p>
+            <p id="outputPesan"></p>
+        </div>
+
+    </div>
+
+</section>
+
     </main>
 
     <hr />
@@ -115,17 +168,6 @@
     <footer class="text-center">
         <span> @2025 Andi's CaffeIN</span>
     </footer>
-
-    <!-- popuop -->
-    <div id="nameModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center">
-    <div class="bg-white p-6 rounded shadow max-w-sm w-full text-center">
-        <h2 class="text-xl font-bold mb-4">What's your name?</h2>
-        <input id="nameInput" class="border p-2 w-full rounded" type="text" placeholder="Enter your name here..." />
-        <button onclick="saveName()" class="mt-4 px-4 py-2 bg-red-500 text-white rounded">
-            Continue
-        </button>
-    </div>
-</div>
     <!-- Javascript External -->
     <script src="js/script.js"></script>
 </body>
